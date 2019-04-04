@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "S:/Engineering/Jake/mc-moving-files/moving_files.py", line 38, in <module>
+    move_files(folder_path)
+  File "S:/Engineering/Jake/mc-moving-files/moving_files.py", line 30, in move_files
+    for file_name in listdir(folder_path):
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\jmiller\\Desktop\\pipette with assets'
+:
+[WinError 3] The system cannot find the path specified: 'C:\\Users\\jmiller\\Desktop\\pipette with assets'

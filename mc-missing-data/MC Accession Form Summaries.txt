@@ -1,0 +1,171 @@
+--> BEFORE RUNNING CORRECTIONS <--
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ -------- 
+| Totals |
+ -------- 
+Accession forms:                1428
+Total fields counted:          44268
+Total blanks:          12112, 27.36%
+Total N/A:               4230, 9.56%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ ------------ 
+| Blank Info |
+ ------------ 
+asset_number                       0
+title                              0
+department                       704
+manufacturer                      33
+manufacturer_model_number         62
+manufacturer_serial_number        33
+vendor                           442
+vendor_catalog_number            491
+purchase_order_number            579
+portable                          12
+asset_description                 12
+intended_use                     372
+process_range                    382
+classification                    68
+new_SOP                           13
+new_logbooks                      13
+calibration_required              22
+calibration_justification_no     374
+calibration_description          542
+calibration_frequency            352
+maintenance_required              22
+maintenance_justification_no     381
+maintenance_description         1074
+maintenance_frequency            352
+scan_attached                   1123
+tier_level                      1122
+qual_val_needed                   29
+validation_justification_no     1122
+validation_description          1122
+protocol_number                  589
+comments                         670
+dtype: int64
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ ---------------
+| N/A, na, etc. |
+ ---------------
+asset_number                      0
+title                             0
+department                        0
+manufacturer                      9
+manufacturer_model_number        92
+manufacturer_serial_number       67
+vendor                          113
+vendor_catalog_number           290
+purchase_order_number           290
+portable                          0
+asset_description                 0
+intended_use                      1
+process_range                   340
+classification                    0
+new_SOP                           0
+new_logbooks                      0
+calibration_required              0
+calibration_justification_no    752
+calibration_description         210
+calibration_frequency            96
+maintenance_required              0
+maintenance_justification_no    586
+maintenance_description         152
+maintenance_frequency           136
+scan_attached                     0
+tier_level                        0
+qual_val_needed                   0
+validation_justification_no      44
+validation_description          269
+protocol_number                 683
+comments                        100
+dtype: int64
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+---> AFTER RUNNING CORRECTIONS <--
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ -------- 
+| Totals |
+ -------- 
+Accession forms:                1428
+Total fields counted:          44268
+Total blanks:                0, 0.0%
+Total N/A:             10038, 22.68%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ ------------ 
+| Blank Info |
+ ------------ 
+asset_number                    0
+title                           0
+department                      0
+manufacturer                    0
+manufacturer_model_number       0
+manufacturer_serial_number      0
+vendor                          0
+vendor_catalog_number           0
+purchase_order_number           0
+portable                        0
+asset_description               0
+intended_use                    0
+process_range                   0
+classification                  0
+new_SOP                         0
+new_logbooks                    0
+calibration_required            0
+calibration_justification_no    0
+calibration_description         0
+calibration_frequency           0
+maintenance_required            0
+maintenance_justification_no    0
+maintenance_description         0
+maintenance_frequency           0
+scan_attached                   0
+tier_level                      0
+qual_val_needed                 0
+validation_justification_no     0
+validation_description          0
+protocol_number                 0
+comments                        0
+dtype: int64
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ ---------------
+| N/A, na, etc. |
+ ---------------
+asset_number                       0
+title                              0
+department                         0
+manufacturer                       9
+manufacturer_model_number         92
+manufacturer_serial_number        67
+vendor                           555
+vendor_catalog_number            781
+purchase_order_number            869
+portable                           0
+asset_description                  0
+intended_use                       1
+process_range                    340
+classification                     0
+new_SOP                            0
+new_logbooks                       0
+calibration_required               0
+calibration_justification_no    1102
+calibration_description          290
+calibration_frequency            343
+maintenance_required               0
+maintenance_justification_no     932
+maintenance_description          449
+maintenance_frequency            467
+scan_attached                      0
+tier_level                         0
+qual_val_needed                    0
+validation_justification_no     1365
+validation_description           334
+protocol_number                 1272
+comments                         770
+dtype: int64
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
