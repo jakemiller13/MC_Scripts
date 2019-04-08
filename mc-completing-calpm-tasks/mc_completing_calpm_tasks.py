@@ -24,12 +24,14 @@ folder_path = input('Enter folder location: ')
 
 # Read in data file - update file and filepath accordingly
 data = pd.read_csv(
-       r'S:\Engineering\Jake\mc-missing-data\Corrected_Data_2018_12_26.csv',
+       r'S:\\Engineering\\Jake\\MC_Scripts\\mc-missing-data\\' + 
+       'Corrected_Data_2018_12_26.csv',
        na_values = (''), keep_default_na = False)
 
 # Define driver and waits
 driver = webdriver.Chrome(executable_path =
-                          r'S:\Engineering\Jake\mc-missing-data\chromedriver')
+                          r'S:\\Engineering\\Jake\\MC_Scripts\\' +
+                          'mc-missing-data\\chromedriver')
 wait = WebDriverWait(driver, 5)
 
 def load_mastercontrol(driver, user_id, password):
@@ -493,23 +495,13 @@ def complete_calibration_tasks(folder_path):
             logf.write('{0}:\n{1} {2}\n'.format(str(asset_number),
                        str(traceback.format_exc()), str(e)))
 
-def delete_redundant_tasks(folder_path, user_id, password):
+def delete_redundant_tasks(user_id, password):
     '''
-    Goes through "My Tasks" and deletes redundancies
+    Goes through "My Tasks" and deletes BOLD tasks
     Make sure you've completed these tasks ahead of time.
     This is a CLEAN UP function - if it sees double tasks, it assumes a glitch 
         in the system has created a bunch of extra tasks
-    NOTE: This is not currently working. Using delete_pipettes instead
     '''
-    
-    asset_numbers_in_folder = []
-    
-    for file_name in listdir(folder_path):
-        if file_name[-3:] == 'pdf':
-    
-            asset_number, file_title, calibration_date = \
-                          split_file_name(file_name)
-            asset_numbers_in_folder.append(asset_number)
     
     navigate_to('my tasks')
     
@@ -518,47 +510,54 @@ def delete_redundant_tasks(folder_path, user_id, password):
     
     while page <= pages:
         navigate_to('my tasks')
-        Select(driver.find_element_by_name('page')).select_by_value(str(1))
         
-        for asset_number in asset_numbers_in_folder:
-            count = len(driver.find_elements_by_xpath(
-                        "//img[contains(@id, 'abort_" + asset_number.zfill(4) +
-                        "')]"))
+        try:
+            Select(driver.find_element_by_name('page')).\
+                   select_by_value(str(page))
+        except NoSuchElementException:
+            print('Page does not exist')
+        
+        row = 1
+        
+        while row <= 100:
+            print('row: ' + str(row))
+            try:
+                print('here 1')
+                if 'bold' in driver.find_element_by_id('row' + str(row)).\
+                                                       get_attribute('style'):
+                    print('here 2')
+                    driver.find_element_by_xpath("//\
+                                                 div[@id = 'row" + str(row) \
+                                                     + "']/\
+                                                 div[@id = 'column_actions']/\
+                                                 a[@name = '_Abort']").click()
             
-            while count > 0:
-                navigate_to('my tasks')
-                navigate_to_frame('myframe')
-                print(asset_number.zfill(4) + ' has ' + str(count) + ' tasks')
-                
-                driver.find_element_by_xpath("//img[contains(@id, 'abort_" +
-                                             asset_number.zfill(4) + "')]").\
-                                             click()
-                driver.switch_to.alert.accept()
-                navigate_to_frame(frame = 'bigFrame',
-                                  window = driver.window_handles[-1])
-                driver.find_element_by_name('comments').\
-                       send_keys('redundant task created by system')
-                
-                try:
-                    driver.find_element_by_name('userID').send_keys(user_id)
-                except NoSuchElementException:
-                    pass
-                
-                driver.find_element_by_name('password').send_keys(password)
-                driver.find_element_by_name('frmSave').click()
+                    driver.switch_to.alert.accept()
+                    navigate_to_frame(frame = 'bigFrame',
+                                      window = driver.window_handles[-1])
+                    driver.find_element_by_name('comments').\
+                           send_keys('redundant task created by system')
+                    
+                    try:
+                        driver.find_element_by_name('userID').\
+                                                    send_keys(user_id)
+                    except NoSuchElementException:
+                        pass
+                    
+                    driver.find_element_by_name('password').send_keys(password)
+                    driver.find_element_by_name('frmSave').click()
+                    navigate_to_frame('myframe')
+                    
+                else:
+                    print('here 3')
+                    row += 1
+            
+            except NoSuchElementException:
+                print('here 4')
+                row += 1
+                pass
 
-                count -= 1
-        
-        navigate_to_frame('myframe')
-        
-        if driver.find_element_by_id('viewAdditionalRight').\
-                  get_attribute('src') == \
-                  'https://acceleronpharma.mastercontrol.com/mc/images' \
-                  + '/icon_arrow_next.gif':
-            driver.find_element_by_id('viewAdditionalRight').click()
-#            page += 1
-        else:
-            break
+        page += 1
 
 def delete_pipettes(user_id, password):
     '''
@@ -605,9 +604,7 @@ def delete_pipettes(user_id, password):
         count = len(driver.find_elements_by_xpath(
                     "//img[contains(@id, 'abort_') and "\
                            + "contains(@id, 'pette')]"))
-                
-#            count -= 1
-        
+
         navigate_to_frame('myframe')
         
         if driver.find_element_by_id('viewAdditionalRight').\
@@ -626,7 +623,7 @@ user_id = input('User Name: ')
 password = input('Password: ')
 
 load_mastercontrol(driver, user_id, password)
-complete_calibration_tasks(folder_path)
+print('You are now free to use whatever functions you need')
 end_time = time.time()
 print('End time: ' + time.asctime())
 
