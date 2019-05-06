@@ -1,0 +1,240 @@
+0883(10):
+Traceback (most recent call last):
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 438, in complete_calibration_tasks
+    check = pipette_info(asset_number).department
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 84, in pipette_info
+    info = data.loc[data['asset_number'] == int(asset_number)].iloc[0]
+ValueError: invalid literal for int() with base 10: '0883(10)'
+ invalid literal for int() with base 10: '0883(10)'
+0883(5):
+Traceback (most recent call last):
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 438, in complete_calibration_tasks
+    check = pipette_info(asset_number).department
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 84, in pipette_info
+    info = data.loc[data['asset_number'] == int(asset_number)].iloc[0]
+ValueError: invalid literal for int() with base 10: '0883(5)'
+ invalid literal for int() with base 10: '0883(5)'
+1437:
+Traceback (most recent call last):
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 454, in complete_calibration_tasks
+    check_for_asset(asset_number)
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 139, in check_for_asset
+    "//a[contains(@href, '" + asset_number + "')]").click()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(@href, '1437')]"}
+  (Session info: chrome=73.0.3683.103)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7601 SP1 x86_64)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 485, in complete_calibration_tasks
+    launch_new_cal_task(asset_number)
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 405, in launch_new_cal_task
+    navigate_to('Scheduled Forms')
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 112, in navigate_to
+    navigate_to_frame(frame = None, window = driver.window_handles[-1])
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 98, in navigate_to_frame
+    wait.until(EC.visibility_of_element_located((By.ID, 'mc')))
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\support\wait.py", line 71, in until
+    value = method(self._driver)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 128, in __call__
+    return _element_if_visible(_find_element(driver, self.locator))
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 415, in _find_element
+    raise e
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 411, in _find_element
+    return driver.find_element(*by)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=73.0.3683.103)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7601 SP1 x86_64)
+
+ Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=73.0.3683.103)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7601 SP1 x86_64)
+
+1438:
+Traceback (most recent call last):
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 454, in complete_calibration_tasks
+    check_for_asset(asset_number)
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 139, in check_for_asset
+    "//a[contains(@href, '" + asset_number + "')]").click()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(@href, '1438')]"}
+  (Session info: chrome=73.0.3683.103)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7601 SP1 x86_64)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 485, in complete_calibration_tasks
+    launch_new_cal_task(asset_number)
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 405, in launch_new_cal_task
+    navigate_to('Scheduled Forms')
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 112, in navigate_to
+    navigate_to_frame(frame = None, window = driver.window_handles[-1])
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 98, in navigate_to_frame
+    wait.until(EC.visibility_of_element_located((By.ID, 'mc')))
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\support\wait.py", line 71, in until
+    value = method(self._driver)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 128, in __call__
+    return _element_if_visible(_find_element(driver, self.locator))
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 415, in _find_element
+    raise e
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 411, in _find_element
+    return driver.find_element(*by)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=73.0.3683.103)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7601 SP1 x86_64)
+
+ Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=73.0.3683.103)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7601 SP1 x86_64)
+
+1439:
+Traceback (most recent call last):
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 454, in complete_calibration_tasks
+    check_for_asset(asset_number)
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 139, in check_for_asset
+    "//a[contains(@href, '" + asset_number + "')]").click()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(@href, '1439')]"}
+  (Session info: chrome=73.0.3683.103)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7601 SP1 x86_64)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 485, in complete_calibration_tasks
+    launch_new_cal_task(asset_number)
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 405, in launch_new_cal_task
+    navigate_to('Scheduled Forms')
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 112, in navigate_to
+    navigate_to_frame(frame = None, window = driver.window_handles[-1])
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 98, in navigate_to_frame
+    wait.until(EC.visibility_of_element_located((By.ID, 'mc')))
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\support\wait.py", line 71, in until
+    value = method(self._driver)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 128, in __call__
+    return _element_if_visible(_find_element(driver, self.locator))
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 415, in _find_element
+    raise e
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 411, in _find_element
+    return driver.find_element(*by)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=73.0.3683.103)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7601 SP1 x86_64)
+
+ Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=73.0.3683.103)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7601 SP1 x86_64)
+
+1852:
+Traceback (most recent call last):
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 454, in complete_calibration_tasks
+    check_for_asset(asset_number)
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 139, in check_for_asset
+    "//a[contains(@href, '" + asset_number + "')]").click()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(@href, '1852')]"}
+  (Session info: chrome=73.0.3683.103)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7601 SP1 x86_64)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 485, in complete_calibration_tasks
+    launch_new_cal_task(asset_number)
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 405, in launch_new_cal_task
+    navigate_to('Scheduled Forms')
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 112, in navigate_to
+    navigate_to_frame(frame = None, window = driver.window_handles[-1])
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 98, in navigate_to_frame
+    wait.until(EC.visibility_of_element_located((By.ID, 'mc')))
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\support\wait.py", line 71, in until
+    value = method(self._driver)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 128, in __call__
+    return _element_if_visible(_find_element(driver, self.locator))
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 415, in _find_element
+    raise e
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 411, in _find_element
+    return driver.find_element(*by)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=73.0.3683.103)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7601 SP1 x86_64)
+
+ Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=73.0.3683.103)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.1.7601 SP1 x86_64)
+
+NA:
+Traceback (most recent call last):
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 438, in complete_calibration_tasks
+    check = pipette_info(asset_number).department
+  File "S:/Engineering/Jake/MC_Scripts/mc-completing-calpm-tasks/mc_completing_calpm_tasks.py", line 84, in pipette_info
+    info = data.loc[data['asset_number'] == int(asset_number)].iloc[0]
+ValueError: invalid literal for int() with base 10: 'NA'
+ invalid literal for int() with base 10: 'NA'
